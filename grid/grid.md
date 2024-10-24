@@ -2,6 +2,10 @@
 
 css网格是一个用于web的二维布局系统。利用网格，你可以把内容按照行与列的格式进行排版。另外，网格还能非常轻松地实现一些复杂布局
 
+`grid-template-rows`,`grid-template-columns`基于网格行和列的维度,去定义网格线的名称和网格轨道的尺寸大小
+
+fr（fraction unit，分数单位）是一种用于定义网格轨道（行或列）大小的单位，它表示可用空间的比例。与 px、% 等绝对或相对单位不同，fr 是基于剩余空间的比例进行分配的。
+
 **定义网格及fr单位**
 
 ```html
@@ -32,6 +36,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	background-color: pink;
 }
 ```
+<img src="./img/grid-default-3r-3c.png" style="zoom:50%;">
 
 ```css
 .main{
@@ -107,6 +112,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	grid-area: a3;
 }
 ```
+<img src="./img/grid-area-1-2-3.png" style="zoom:50%;">
 
 ```html
 	<div class="main">
@@ -139,6 +145,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	grid-area: a3;
 }
 ```
+<img src="./img/grid-area-2-3-1.png" style="zoom:50%;">
 
 ##### 网络命名缩写
 
@@ -179,6 +186,8 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	grid-area: a3;
 }
 ```
+<img src="./img/grid-area-1-2-3.png" style="zoom:50%;">
+
 
 #### 网格间隙及简写
 
@@ -229,6 +238,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	grid-area: a3;
 }
 ```
+<img src="./img/grid-row-column-gap.png" style="zoom:50%;">
 
 这里说flex也可以实现`row-gap`，`column-gap`，发现并不能，可能和浏览器版本相关
 
@@ -264,6 +274,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	background-color: pink;
 }
 ```
+<img src="./img/flex-gap.png" style="zoom:50%;">
 
 #### 网格子元素对齐方式及简写
 
@@ -317,6 +328,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	border: 1px solid #000;
 }
 ```
+<img src="./img/grid-justify-align.png" style="zoom: 50%;">
 
 #### 网格元素对齐方式及简写
 
@@ -362,6 +374,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	border: 1px solid #000;
 }
 ```
+<img src="./img/grid-align-around.png" style="zoom: 50%;">
 
 #### 基于线的元素放置
 
@@ -395,6 +408,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
     /* 这整个范围就是这个单元格的大小 */
 }
 ```
+<img src="./img/grid-start-end.png" style="zoom: 50%;">
 
 多个子元素的位置放置方式
 
@@ -436,6 +450,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	/*grid-row-end: 4;*/
 }
 ```
+<img src="./img/grid-column-sart-end.png" style="zoom: 50%;">
 
 ###### 使用span方式指定行列数量
 
@@ -464,6 +479,7 @@ css网格是一个用于web的二维布局系统。利用网格，你可以把�
 	grid-column-end: span 2; /* span 表示占用列 2表示占用两列 */
 	}
 ```
+<img src="./img/grid-column-start-end2.png" style="zoom: 50%;">
 
 ###### 使用列线名称
 
