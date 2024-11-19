@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/iconfont.css"></link>
+    <style>
+        /*
+        目标要求,左导航,鼠标移入,右侧显示
+        先说明html布局
+        1. div中设置 div>ul>li>a 导航栏
+        2. 在li>a+ul>li>a+img,在导航栏 li>a的同级目录下设置默认隐藏的ul>li内容
+        3. 对默认的ul>li>a+img,在导航栏上设置css属性
+        再说明css排版思路
+        1.设置导航,宽高固定,背景,flex一行
+        2.设置div>ul,ul>li,占满一行
+        3.设置div>ul,相对定位
+        4.设置div>ul>li>ul,绝对定位
+        5.设置div>ul>li>ul,grid排版
+         */
+        .nav{
+            display: flex;
+            background-color: #ccc;
+            height: 100vh;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .nav>.item{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .nav .item>li{
+            width: 100%;
+            line-height: 32px;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #333;
+            /*border: 1px solid red;*/
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            /*position: relative;*/
+        }
+        .nav .item>li:hover{
+            background-color: #f3ae24;
+        }
+        .nav .item>li i{
+            /*border: 1px solid #000;*/
+            padding-right: 20px;
+        }
+        .nav .item>li a{
+            color: #fff;
+            /*border: 1px solid #000;*/
+        }
+        .nav .item>li:hover .card{
+            display: grid;
+
+        }
+        .nav .item .card{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            /*display: grid;*/
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: 305px;
+            grid-auto-flow: column;
+            height: 460px;
+            box-shadow: 5px 5px 10px #ccc;
+        }
+        .nav .item .card li{
+            width: 300px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .nav .item .card li img{
+            margin-left:26px;
+            margin-right:21px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="item">
+            <li>
+                <a href="#">手机 电话卡</a><i class="iconfont icon-right-arrow"></i>
+                <ul class="card">
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">笔记本 显示器 平板</a><i class="iconfont icon-right-arrow"></i>
+                <ul class="card">
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">手机 电话卡</a><i class="iconfont icon-right-arrow"></i>
+                <ul class="card">
+                    <li>
+                        <img src="./css/tv.webp" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/tv.webp" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/tv.webp" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/tv.webp" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/tv.webp" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                    <li>
+                        <img src="./css/phone.png" alt="">
+                        <p>小米 MIX FOLD</p>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">笔记本 显示器 平板</a><i class="iconfont icon-right-arrow"></i></li>
+            <li><a href="#">手机 电话卡</a><i class="iconfont icon-right-arrow"></i></li>
+            <li><a href="#">笔记本 显示器 平板</a><i class="iconfont icon-right-arrow"></i></li>
+        </ul>
+    </div>
+</body>
+</html>

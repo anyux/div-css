@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .main {
+            background: skyblue;
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 100px 300px 100px;
+            gap: 10px;
+        }
+        .main div {
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main div:first-of-type {
+            grid-area: 1/1/span 1/span 3;
+        }
+        .main div:last-of-type {
+            grid-area: 3/1/span 1/span 3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main">
+    <div>header</div>
+    <div>left</div>
+    <div>center</div>
+    <div>right</div>
+    <div>footer</div>
+</div>
+</body>
+</html>

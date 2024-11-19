@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            width: 320px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            /*display: grid;*/
+            padding: 10px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+        .main .title {
+            font-size: 16px;
+            font-weight: bold;
+            height: 20px;
+            /*background-color: #ccc;*/
+            margin-bottom: 10px;
+        }
+        .main .content {
+            display: grid;
+            grid-template:
+            'item1 item2 item2' 90px
+            'item3 item2 item2' 90px
+            'item4 item4 item5' 90px
+            'item6 item7 item7' 90px
+            / 90px 90px 90px;
+            background-color: skyblue;
+            column-gap: 10px;
+            row-gap: 10px;
+            justify-content: space-between;
+            box-sizing: border-box;
+            /*padding: 10px;*/
+        }
+
+        .main .item {
+            /*border: 1px solid red;*/
+            display: flex;
+            flex-direction: column;
+            background-color: #299CEF7F;
+            color: #fff;
+        }
+        .main .item p {
+            width: 100%;
+            text-align: center;
+            /*border: 1px solid #000;*/
+        }
+        .main .item .hot{
+            width: 100%;
+            /*border: 1px solid #000;*/
+            text-align: right;
+            padding-right: 15px;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+        .main .item:nth-of-type(1){
+            grid-area: item1;
+        }
+        .main .item:nth-of-type(2){
+            grid-area: item2;
+        }
+        .main .item:nth-of-type(3){
+            grid-area: item3;
+            background-color: rgba(245, 49, 123,.7);
+        }
+        .main .item:nth-of-type(4){
+            grid-area: item4;
+        }
+        .main .item:nth-of-type(5){
+            grid-area: item5;
+        }
+        .main .item:nth-of-type(6){
+            grid-area: item6;
+            background-color: rgba(214, 116, 7,.7);
+        }
+        .main .item:nth-of-type(7){
+            grid-area: item7;
+            background-color: rgba(214, 116, 7,.7);
+        }
+        .main .page{
+        }
+        .main .page ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .main .page ul,.main .page ul li{
+            list-style: none;
+        }
+        .main .page ul li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        .main .page ul li:nth-of-type(1){
+            background-color: #fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">今日上榜</div>
+        <div class="content">
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+            <div class="item">
+                <div class="hot">实时热点</div>
+                <p>阿里第一颗芯片</p>
+            </div>
+        </div>
+        <div class="page">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
