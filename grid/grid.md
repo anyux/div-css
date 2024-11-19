@@ -548,6 +548,10 @@ justify-self: center;
 align-self: center;
 ```
 
+
+
+#### 左导航示例
+
 ```bash
 目标要求,左导航,鼠标移入,右侧显示
 先说明html布局
@@ -561,8 +565,6 @@ align-self: center;
 4.设置div>ul>li>ul,绝对定位
 5.设置div>ul>li>ul,grid排版
 ```
-
-#### 左导航示例
 
 ```html
     <div class="nav">
